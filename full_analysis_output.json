@@ -1,0 +1,245 @@
+{
+    "metadata": {
+        "input_documents": [
+            "research_paper_sample.pdf"
+        ],
+        "persona": "PhD Researcher in Computational Biology",
+        "job_to_be_done": "Prepare a comprehensive literature review focusing on methodologies, datasets, and performance benchmarks",
+        "processing_timestamp": "2025-07-24 21:59:38 IST"
+    },
+    "parsed_documents_preview": [
+        {
+            "file_name": "research_paper_sample.pdf",
+            "sections": [
+                {
+                    "title": "Initial Content",
+                    "level": 0,
+                    "page_range": [
+                        1,
+                        1
+                    ],
+                    "text_content": "\n# My Sample Research Document (Use a very large, bold font for this) ## 1. Introduction (Use a large,\nbold font) This is the introductory paragraph of the document. It talks about the general topic and sets\nthe stage for the rest of the content. ### 1.1. Background of the Study (Use a slightly smaller, bold font)\nHere we delve into the background of the problem. It's important to provide context for the research. *\nThis is a bullet point item. * Another key point here. This is another regular paragraph of body text that\nfollows a list. ## 2. Methodology (Use a large, bold font) This section describes how the research was\nconducted, including the methods and materials used.",
+                    "importance_score": 0.0,
+                    "subsections": [
+                        {
+                            "text_content": "# My Sample Research Document (Use a very large, bold font for this) ## 1. Introduction (Use a large,",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.125,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "bold font) This is the introductory paragraph of the document. It talks about the general topic and sets",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.125,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "the stage for the rest of the content. ### 1.1. Background of the Study (Use a slightly smaller, bold font)",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.125,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "Here we delve into the background of the problem. It's important to provide context for the research. *",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "This is a bullet point item. * Another key point here. This is another regular paragraph of body text that",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.125,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "follows a list. ## 2. Methodology (Use a large, bold font) This section describes how the research was",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.125,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "conducted, including the methods and materials used.",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.125,
+                            "refined_text": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "persona_analysis_results": {
+        "keywords": [
+            "comprehensive",
+            "datasets",
+            "phd",
+            "literature",
+            "researcher",
+            "review",
+            "performance",
+            "methodologies",
+            "prepare",
+            "benchmarks",
+            "computational",
+            "biology",
+            "focusing",
+            "prepare_comprehensive",
+            "comprehensive_literature",
+            "literature_review",
+            "review_focusing",
+            "focusing_methodologies",
+            "methodologies_datasets",
+            "datasets_performance",
+            "performance_benchmarks",
+            "prepare_comprehensive_literature",
+            "comprehensive_literature_review",
+            "literature_review_focusing",
+            "review_focusing_methodologies",
+            "focusing_methodologies_datasets",
+            "methodologies_datasets_performance",
+            "datasets_performance_benchmarks",
+            "phd_researcher",
+            "researcher_computational",
+            "computational_biology",
+            "phd_researcher_computational",
+            "researcher_computational_biology"
+        ],
+        "concepts": [
+            "DATA_INFO",
+            "EVALUATION_METRIC"
+        ],
+        "heuristics": {
+            "priority_section_titles": [
+                "Methodology",
+                "Methods",
+                "Experimental Setup",
+                "Results",
+                "Evaluation",
+                "Performance",
+                "Data",
+                "Datasets",
+                "Discussion"
+            ],
+            "high_value_content_keywords": [
+                "proposed method",
+                "novel approach",
+                "architecture",
+                "algorithm",
+                "model design",
+                "dataset used",
+                "data collection",
+                "data preprocessing",
+                "benchmark dataset",
+                "accuracy",
+                "precision",
+                "recall",
+                "f1-score",
+                "AUC",
+                "ROC",
+                "loss",
+                "metrics",
+                "ablation study",
+                "comparison with",
+                "state-of-the-art"
+            ],
+            "de_emphasize_content_keywords": [
+                "general overview",
+                "historical context of X",
+                "simple definition of"
+            ],
+            "structural_boosts": {
+                "H1": 1.5,
+                "H2": 1.2,
+                "lists": 0.8,
+                "tables": 1.0
+            },
+            "initial_content_focus": 0.5
+        },
+        "job_to_be_done_raw_text": "Prepare a comprehensive literature review focusing on methodologies, datasets, and performance benchmarks"
+    },
+    "ranked_sections": [
+        {
+            "document": "research_paper_sample.pdf",
+            "page_range": [
+                1,
+                1
+            ],
+            "section_title": "Initial Content",
+            "importance_score": 0.0,
+            "raw_text_content": "\n# My Sample Research Document (Use a very large, bold font for this) ## 1. Introduction (Use a large,\nbold font) This is the introductory paragraph of the document. It talks about the general topic and sets\nthe stage for the rest of the content. ### 1.1. Background of the Study (Use a slightly smaller, bold font)\nHere we delve into the background of the problem. It's important to provide context for the research. *\nThis is a bullet point item. * Another key point here. This is another regular paragraph of body text that\nfollows a list. ## 2. Methodology (Use a large, bold font) This section describes how the research was\nconducted, including the methods and materials used.",
+            "importance_rank": 1
+        }
+    ],
+    "ranked_subsections": [
+        {
+            "document": "research_paper_sample.pdf",
+            "page_number": 1,
+            "section_title": "Initial Content",
+            "subsection_text": "# My Sample Research Document (Use a very large, bold font for this) ## 1. Introduction (Use a large,",
+            "importance_score": 0.125,
+            "importance_rank": 1
+        },
+        {
+            "document": "research_paper_sample.pdf",
+            "page_number": 1,
+            "section_title": "Initial Content",
+            "subsection_text": "bold font) This is the introductory paragraph of the document. It talks about the general topic and sets",
+            "importance_score": 0.125,
+            "importance_rank": 2
+        },
+        {
+            "document": "research_paper_sample.pdf",
+            "page_number": 1,
+            "section_title": "Initial Content",
+            "subsection_text": "the stage for the rest of the content. ### 1.1. Background of the Study (Use a slightly smaller, bold font)",
+            "importance_score": 0.125,
+            "importance_rank": 3
+        },
+        {
+            "document": "research_paper_sample.pdf",
+            "page_number": 1,
+            "section_title": "Initial Content",
+            "subsection_text": "This is a bullet point item. * Another key point here. This is another regular paragraph of body text that",
+            "importance_score": 0.125,
+            "importance_rank": 4
+        },
+        {
+            "document": "research_paper_sample.pdf",
+            "page_number": 1,
+            "section_title": "Initial Content",
+            "subsection_text": "follows a list. ## 2. Methodology (Use a large, bold font) This section describes how the research was",
+            "importance_score": 0.125,
+            "importance_rank": 5
+        },
+        {
+            "document": "research_paper_sample.pdf",
+            "page_number": 1,
+            "section_title": "Initial Content",
+            "subsection_text": "conducted, including the methods and materials used.",
+            "importance_score": 0.125,
+            "importance_rank": 6
+        },
+        {
+            "document": "research_paper_sample.pdf",
+            "page_number": 1,
+            "section_title": "Initial Content",
+            "subsection_text": "Here we delve into the background of the problem. It's important to provide context for the research. *",
+            "importance_score": 0.0,
+            "importance_rank": 7
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "input_documents": [
+            "research_paper_sample.pdf"
+        ],
+        "persona": "PhD Researcher in Computational Biology",
+        "job_to_be_done": "Prepare a comprehensive literature review focusing on methodologies, datasets, and performance benchmarks",
+        "processing_timestamp": "2025-07-24 21:41:18 IST"
+    },
+    "parsed_documents_preview": [
+        {
+            "file_name": "research_paper_sample.pdf",
+            "sections": [
+                {
+                    "title": "Initial Content",
+                    "level": 0,
+                    "page_range": [
+                        1,
+                        1
+                    ],
+                    "text_content": "\n# My Sample Research Document (Use a very large, bold font for this) ## 1. Introduction (Use a large,\nbold font) This is the introductory paragraph of the document. It talks about the general topic and sets\nthe stage for the rest of the content. ### 1.1. Background of the Study (Use a slightly smaller, bold font)\nHere we delve into the background of the problem. It's important to provide context for the research. *\nThis is a bullet point item. * Another key point here. This is another regular paragraph of body text that\nfollows a list. ## 2. Methodology (Use a large, bold font) This section describes how the research was\nconducted, including the methods and materials used.",
+                    "importance_score": 0.0,
+                    "subsections": [
+                        {
+                            "text_content": "# My Sample Research Document (Use a very large, bold font for this) ## 1. Introduction (Use a large,",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "bold font) This is the introductory paragraph of the document. It talks about the general topic and sets",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "the stage for the rest of the content. ### 1.1. Background of the Study (Use a slightly smaller, bold font)",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "Here we delve into the background of the problem. It's important to provide context for the research. *",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "This is a bullet point item. * Another key point here. This is another regular paragraph of body text that",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "follows a list. ## 2. Methodology (Use a large, bold font) This section describes how the research was",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        },
+                        {
+                            "text_content": "conducted, including the methods and materials used.",
+                            "page_number": 1,
+                            "is_list_item": false,
+                            "is_table_candidate": false,
+                            "importance_score": 0.0,
+                            "refined_text": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "input_documents": [
+            "research_paper_sample.pdf"
+        ],
+        "persona": "PhD Researcher in Computational Biology",
+        "job_to_be_done": "Prepare a comprehensive literature review focusing on methodologies, datasets, and performance benchmarks",
+        "processing_timestamp": "2025-07-25 01:35:19 IST"
+    },
+    "extracted_sections": [],
+    "sub_section_analysis": []
+}
