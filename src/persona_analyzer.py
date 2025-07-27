@@ -5,6 +5,7 @@ from typing import Dict, List, Any
 # from nltk.tokenize import word_tokenize # Uncomment if you install NLTK
 # from nltk.stem import PorterStemmer # Uncomment if you install NLTK
 from src.heuristics import CONCEPT_LEXICON, get_heuristics # Import our heuristics
+from src.nlp_utils import extract_keywords, classify_intent
 
 class PersonaAnalyzer:
     def __init__(self):
@@ -42,10 +43,16 @@ class PersonaAnalyzer:
             return []
         return ["_".join(tokens[i:i+n]) for i in range(len(tokens) - n + 1)]
 
-    def extract_persona_job_features(self, persona_description: str, job_to_be_done: str) -> Dict[str, Any]:
+    def extract_persona_job_features(self, persona_description: str, job_to_be_done: str) -> dict:
         """
-        Extracts keywords, concepts, and loads heuristics for a given persona and job.
+        Extracts features from persona and job-to-be-done using NLP.
         """
+        features = {}
+        # Combine persona and job for richer keyword extraction
+        combined_text = persona_description + ' ' + job_to_be_done
+        features['keywords'] = extract_keywords(combined_text, top_n=15)
+        features['intent'] = classify_intent(job_to_be_done)
+
         # 1. Process Job-to-be-Done and Persona Description
         jtd_tokens = self._preprocess_text(job_to_be_done)
         persona_tokens = self._preprocess_text(persona_description)
@@ -70,8 +77,8 @@ class PersonaAnalyzer:
         # 3. Load Persona-Specific Heuristics
         specific_heuristics = get_heuristics(persona_description, job_to_be_done)
 
-        return {
-            "keywords": combined_keywords_raw, # All extracted keywords and n-grams
-            "concepts": list(extracted_concepts), # Unique high-level concepts
-            "heuristics": specific_heuristics # Persona-specific rules/weights
-        }
+        features["keywords"] = combined_keywords_raw # All extracted keywords and n-grams
+        features["concepts"] = list(extracted_concepts) # Unique high-level concepts
+        features["heuristics"] = specific_heuristics # Persona-specific rules/weights
+
+        return features

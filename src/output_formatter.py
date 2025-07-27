@@ -3,6 +3,7 @@
 import re
 from typing import List, Dict, Any, Tuple
 from datetime import datetime
+from src.nlp_utils import abstractive_summary
 
 class OutputFormatter:
     def __init__(self):
@@ -83,13 +84,15 @@ class OutputFormatter:
                 persona_features.get("keywords", []),
                 self.max_refined_text_sentences
             )
+            abs_summary = abstractive_summary(section_data.get("raw_text_content", ""))
             final_extracted_sections.append({
                 "document": section_data["document"],
                 "page_number": f"{section_data['page_range'][0]}-{section_data['page_range'][1]}" if section_data['page_range'][0] != section_data['page_range'][1] else str(section_data['page_range'][0]),
                 "section_title": section_data["section_title"],
                 "importance_rank": i + 1, # Re-rank based on final selection
                 "explanation": section_data.get("explanation", ""),
-                "summary": summary
+                "summary": summary,
+                "abstractive_summary": abs_summary
             })
 
         # --- Sub-section Analysis ---
@@ -113,12 +116,14 @@ class OutputFormatter:
                     persona_features.get("keywords", []),
                     self.max_refined_text_sentences
                 )
+                abs_summary = abstractive_summary(ss_data['subsection_text'])
                 final_subsection_analysis.append({
                     "document": ss_data["document"],
                     "page_number": ss_data["page_number"],
                     "refined_text": refined_text,
                     "explanation": ss_data.get("explanation", ""),
-                    "summary": refined_text
+                    "summary": refined_text,
+                    "abstractive_summary": abs_summary
                 })
         final_subsection_analysis.sort(key=lambda x: (x['document'], x['page_number']))
         final_output_json = {

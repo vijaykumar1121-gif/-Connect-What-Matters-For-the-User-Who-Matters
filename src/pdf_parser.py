@@ -1,7 +1,7 @@
 # src/pdf_parser.py
 
 import fitz # PyMuPDF
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from src.data_models import Document, Section, Subsection
 
 class PDFParser:

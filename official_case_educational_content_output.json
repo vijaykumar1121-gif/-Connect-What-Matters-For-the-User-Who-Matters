@@ -1,0 +1,182 @@
+{
+    "metadata": {
+        "input_documents": [
+            "test_docs\\chemistry_chapter1.pdf",
+            "test_docs\\chemistry_chapter2.pdf",
+            "test_docs\\chemistry_chapter3.pdf",
+            "test_docs\\graph_nn_benchmarks.pdf",
+            "test_docs\\graph_nn_datasets.pdf",
+            "test_docs\\graph_nn_methodology.pdf",
+            "test_docs\\research_paper_sample.pdf",
+            "test_docs\\sample2.pdf",
+            "test_docs\\sample3.pdf",
+            "test_docs\\tech_company_2022.pdf",
+            "test_docs\\tech_company_2023.pdf",
+            "test_docs\\tech_company_2024.pdf"
+        ],
+        "persona": "Undergraduate Chemistry Student",
+        "job_to_be_done": "Identify key concepts and mechanisms for exam preparation on reaction kinetics",
+        "processing_timestamp": "2025-07-27 15:54:34 IST"
+    },
+    "extracted_sections": [
+        {
+            "document": "test_docs\\chemistry_chapter1.pdf",
+            "page_number": "1",
+            "section_title": "1.3 Key Concepts for Exam Preparation",
+            "importance_rank": 1,
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.50); Semantic similarity: 0.61; Structural boost applied (x1.05); Persona-specific high-value content found (score: 6.00); Section title matches job keywords (boost: 12.00)",
+            "summary": "Students should understand: (1) How to determine reaction order from experimental data, (2) The\nrelationship between rate constant and temperature (Arrhenius equation), (3) How catalysts affect\nreaction rates, and (4) The concept of activation energy.",
+            "abstractive_summary": "students should understand: (1) how to determine reaction order from experimental data . (2) The relationship between rate constant and temperature (Arrhenius equation), (3) how catalysts affect reaction rates ."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter3.pdf",
+            "page_number": "1",
+            "section_title": "3.3 Exam Preparation Focus",
+            "importance_rank": 2,
+            "explanation": "Matched persona/job keywords (score: 5.50); Matched domain concepts (score: 0.50); Semantic similarity: 0.69; Topic overlap: exam; Structural boost applied (x0.70); Persona-specific high-value content found (score: 4.00); Section title matches job keywords (boost: 6.00)",
+            "summary": "For exam preparation, students should be able to: (1) Draw energy diagrams for simple reactions, (2)\nIdentify transition states and intermediates, (3) Calculate activation energies from rate data, and (4)\nPredict how changes in conditions affect reaction rates.",
+            "abstractive_summary": "students should be able to: (1) Draw energy diagrams for simple reactions, (2) Identify transition states and intermediates, (3) Calculate activation energies from rate data, and (4) Predict how changes in conditions affect reaction rates."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter1.pdf",
+            "page_number": "1",
+            "section_title": "1.1 What is Reaction Kinetics?",
+            "importance_rank": 3,
+            "explanation": "Matched persona/job keywords (score: 6.50); Matched domain concepts (score: 1.50); Semantic similarity: 0.65; Structural boost applied (x1.05); Section title matches job keywords (boost: 6.00)",
+            "summary": "Reaction kinetics is the study of the rates of chemical reactions and the factors that influence them. Understanding kinetics is crucial for predicting reaction outcomes and optimizing reaction conditions.",
+            "abstractive_summary": "kinetics is the study of the rates of chemical reactions and factors that influence them . it is crucial for predicting reaction outcomes and optimizing reaction conditions."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": "1",
+            "section_title": "2.2 SN1 and SN2 Mechanisms",
+            "importance_rank": 4,
+            "explanation": "Matched persona/job keywords (score: 3.00); Matched domain concepts (score: 1.50); Semantic similarity: 0.29; Structural boost applied (x0.70); Persona-specific high-value content found (score: 8.00); Section title matches job keywords (boost: 3.00)",
+            "summary": "Nucleophilic substitution reactions can proceed via SN1 (unimolecular) or SN2 (bimolecular)\nmechanisms. SN1 reactions involve a carbocation intermediate and show first-order kinetics, while SN2\nreactions occur in one step and show second-order kinetics.",
+            "abstractive_summary": "SN1 reactions involve a carbocation intermediate . SN2 reactions occur in one step and show second-order kinetics ."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": "1",
+            "section_title": "2.1 Understanding Reaction Mechanisms",
+            "importance_rank": 5,
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.50); Semantic similarity: 0.51; Structural boost applied (x1.05); Persona-specific high-value content found (score: 2.00); Section title matches job keywords (boost: 6.00)",
+            "summary": "A reaction mechanism describes the step-by-step process by which reactants are converted to\nproducts. Each step involves the formation or breaking of chemical bonds, and understanding these\nsteps is essential for predicting reaction outcomes.",
+            "abstractive_summary": "a reaction mechanism describes the step-by-step process by which reactants are converted to products . each step involves the formation or breaking of chemical bonds ."
+        }
+    ],
+    "sub_section_analysis": [
+        {
+            "document": "test_docs\\chemistry_chapter1.pdf",
+            "page_number": 1,
+            "refined_text": "Reaction kinetics is the study of the rates of chemical reactions and the factors that influence them.",
+            "explanation": "Matched persona/job keywords (score: 3.50); Matched domain concepts (score: 0.75); Structural boost applied (x0.70); Semantic similarity: 0.66; Job-to-be-done keyword density boost (0.41)",
+            "summary": "Reaction kinetics is the study of the rates of chemical reactions and the factors that influence them.",
+            "abstractive_summary": "Reaction kinetics is the study of the rates of chemical reactions and the factors that influence them."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter1.pdf",
+            "page_number": 1,
+            "refined_text": "Understanding kinetics is crucial for predicting reaction outcomes and optimizing reaction conditions.",
+            "explanation": "Matched persona/job keywords (score: 3.00); Matched domain concepts (score: 0.75); Structural boost applied (x0.70); Semantic similarity: 0.66; Job-to-be-done keyword density boost (0.55)",
+            "summary": "Understanding kinetics is crucial for predicting reaction outcomes and optimizing reaction conditions.",
+            "abstractive_summary": "Understanding kinetics is crucial for predicting reaction outcomes and optimizing reaction conditions."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter1.pdf",
+            "page_number": 1,
+            "refined_text": "reaction rates, and (4) The concept of activation energy.",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.50; Job-to-be-done keyword density boost (0.27)",
+            "summary": "reaction rates, and (4) The concept of activation energy.",
+            "abstractive_summary": "reaction rates, and (4) The concept of activation energy."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter1.pdf",
+            "page_number": 1,
+            "refined_text": "relationship between rate constant and temperature (Arrhenius equation), (3) How catalysts affect",
+            "explanation": "Persona-specific high-value content found (score: 4.00); Structural boost applied (x0.70); Semantic similarity: 0.24; Job-to-be-done keyword density boost (0.14)",
+            "summary": "relationship between rate constant and temperature (Arrhenius equation), (3) How catalysts affect",
+            "abstractive_summary": "relationship between rate constant and temperature (Arrhenius equation), (3) How catalysts affect"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter1.pdf",
+            "page_number": 1,
+            "refined_text": "Students should understand: (1) How to determine reaction order from experimental data, (2) The",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.58; Job-to-be-done keyword density boost (0.14)",
+            "summary": "Students should understand: (1) How to determine reaction order from experimental data, (2) The",
+            "abstractive_summary": "Students should understand: (1) How to determine reaction order from experimental data, (2) The"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": 1,
+            "refined_text": "mechanisms. SN1 reactions involve a carbocation intermediate and show first-order kinetics, while SN2",
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.75); Persona-specific high-value content found (score: 4.00); Structural boost applied (x0.70); Semantic similarity: 0.31; Job-to-be-done keyword density boost (0.41)",
+            "summary": "mechanisms. SN1 reactions involve a carbocation intermediate and show first-order kinetics, while SN2",
+            "abstractive_summary": "mechanisms. SN1 reactions involve a carbocation intermediate and show first-order kinetics, while SN2"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": 1,
+            "refined_text": "Nucleophilic substitution reactions can proceed via SN1 (unimolecular) or SN2 (bimolecular)",
+            "explanation": "Matched domain concepts (score: 0.25); Persona-specific high-value content found (score: 4.00); Structural boost applied (x0.70); Semantic similarity: 0.21",
+            "summary": "Nucleophilic substitution reactions can proceed via SN1 (unimolecular) or SN2 (bimolecular)",
+            "abstractive_summary": "Nucleophilic substitution reactions can proceed via SN1 (unimolecular) or SN2 (bimolecular)"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": 1,
+            "refined_text": "reactions occur in one step and show second-order kinetics.",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.50); Structural boost applied (x0.70); Semantic similarity: 0.54; Job-to-be-done keyword density boost (0.27)",
+            "summary": "reactions occur in one step and show second-order kinetics.",
+            "abstractive_summary": "reactions occur in one step and show second-order kinetics."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": 1,
+            "refined_text": "A reaction mechanism describes the step-by-step process by which reactants are converted to",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.49; Job-to-be-done keyword density boost (0.14)",
+            "summary": "A reaction mechanism describes the step-by-step process by which reactants are converted to",
+            "abstractive_summary": "A reaction mechanism describes the step-by-step process by which reactants are converted to"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": 1,
+            "refined_text": "steps is essential for predicting reaction outcomes.",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.55; Job-to-be-done keyword density boost (0.27)",
+            "summary": "steps is essential for predicting reaction outcomes.",
+            "abstractive_summary": "steps is essential for predicting reaction outcomes."
+        },
+        {
+            "document": "test_docs\\chemistry_chapter2.pdf",
+            "page_number": 1,
+            "refined_text": "products. Each step involves the formation or breaking of chemical bonds, and understanding these",
+            "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.44; Job-to-be-done keyword density boost (0.14)",
+            "summary": "products. Each step involves the formation or breaking of chemical bonds, and understanding these",
+            "abstractive_summary": "products. Each step involves the formation or breaking of chemical bonds, and understanding these"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter3.pdf",
+            "page_number": 1,
+            "refined_text": "Identify transition states and intermediates, (3) Calculate activation energies from rate data, and (4)",
+            "explanation": "Matched persona/job keywords (score: 1.00); Persona-specific high-value content found (score: 4.00); Structural boost applied (x0.70); Semantic similarity: 0.29; Job-to-be-done keyword density boost (0.27)",
+            "summary": "Identify transition states and intermediates, (3) Calculate activation energies from rate data, and (4)",
+            "abstractive_summary": "Identify transition states and intermediates, (3) Calculate activation energies from rate data, and (4)"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter3.pdf",
+            "page_number": 1,
+            "refined_text": "For exam preparation, students should be able to: (1) Draw energy diagrams for simple reactions, (2)",
+            "explanation": "Matched persona/job keywords (score: 3.50); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.64; Job-to-be-done keyword density boost (0.41)",
+            "summary": "For exam preparation, students should be able to: (1) Draw energy diagrams for simple reactions, (2)",
+            "abstractive_summary": "For exam preparation, students should be able to: (1) Draw energy diagrams for simple reactions, (2)"
+        },
+        {
+            "document": "test_docs\\chemistry_chapter3.pdf",
+            "page_number": 1,
+            "refined_text": "Predict how changes in conditions affect reaction rates.",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.54; Job-to-be-done keyword density boost (0.14)",
+            "summary": "Predict how changes in conditions affect reaction rates.",
+            "abstractive_summary": "Predict how changes in conditions affect reaction rates."
+        }
+    ]
+}

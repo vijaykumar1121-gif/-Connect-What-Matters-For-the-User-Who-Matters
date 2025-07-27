@@ -1,3 +1,11 @@
 PyPDF2
 numpy
 scikit-learn
+spacy
+transformers
+torch
+textblob
+nltk
+sentence-transformers
+PyMuPDF
+psutil

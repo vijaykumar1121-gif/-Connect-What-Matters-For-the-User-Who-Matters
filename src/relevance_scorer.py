@@ -4,6 +4,7 @@ import re
 from typing import List, Dict, Any, Tuple
 from src.data_models import Document, Section, Subsection
 from collections import Counter
+from src.nlp_utils import semantic_similarity, extract_entities, extract_topics
 
 class RelevanceScorer:
     def __init__(self):
@@ -94,6 +95,17 @@ class RelevanceScorer:
         heuristics = persona_features.get("heuristics", {})
         jtd_raw = persona_features.get("job_to_be_done_raw_text", "").lower()
 
+        persona_job_text = persona_features.get("persona_job_text", None)
+        if not persona_job_text:
+            persona_job_text = persona_features.get("persona_description", "") + ' ' + persona_features.get("job_to_be_done_raw_text", "")
+        persona_entities = set(extract_entities(persona_job_text))
+        persona_intent = persona_features.get("intent", "general")
+        persona_topics = set()
+        try:
+            persona_topics = set([w for t in extract_topics([persona_job_text], num_topics=1, num_words=5) for w in t[1].split(' + ')])
+        except Exception:
+            pass
+
         for doc_obj in processed_documents:
             for section in doc_obj.sections:
                 section_score = 0.0
@@ -109,6 +121,29 @@ class RelevanceScorer:
                 if concept_score > 0:
                     explanation_parts.append(f"Matched domain concepts (score: {concept_score:.2f})")
                 section_score += concept_score
+
+                # Semantic similarity
+                sem_score = semantic_similarity(persona_job_text, section.text_content)
+                section_score += sem_score * 2.0  # Weight can be tuned
+                explanation_parts.append(f"Semantic similarity: {sem_score:.2f}")
+
+                # NER entity overlap
+                section_entities = set(extract_entities(section.text_content))
+                common_entities = persona_entities & section_entities
+                if common_entities:
+                    section_score += len(common_entities) * 1.5  # Boost per entity
+                    explanation_parts.append(f"Entity overlap: {', '.join(common_entities)}")
+
+                # Topic modeling
+                section_topics = set()
+                try:
+                    section_topics = set([w for t in extract_topics([section.text_content], num_topics=1, num_words=5) for w in t[1].split(' + ')])
+                except Exception:
+                    pass
+                common_topics = persona_topics & section_topics
+                if common_topics:
+                    section_score += len(common_topics) * 1.0
+                    explanation_parts.append(f"Topic overlap: {', '.join(common_topics)}")
 
                 # 2. Structural Importance Boost
                 struct_boost = self._apply_structural_boost(section, heuristics) * self.default_weights["structural_importance"]
@@ -171,6 +206,17 @@ class RelevanceScorer:
                     if struct_boost != 1.0:
                         ss_explanation_parts.append(f"Structural boost applied (x{struct_boost:.2f})")
                     subsection_score *= struct_boost
+
+                    # Semantic similarity for subsections
+                    sem_score_ss = semantic_similarity(persona_job_text, subsection.text_content)
+                    subsection_score += sem_score_ss * 2.0
+                    ss_explanation_parts.append(f"Semantic similarity: {sem_score_ss:.2f}")
+
+                    ss_entities = set(extract_entities(subsection.text_content))
+                    common_ss_entities = persona_entities & ss_entities
+                    if common_ss_entities:
+                        subsection_score += len(common_ss_entities) * 1.5
+                        ss_explanation_parts.append(f"Entity overlap: {', '.join(common_ss_entities)}")
 
                     normalized_ss_text = self._normalize_text(subsection.text_content)
                     if jtd_raw:

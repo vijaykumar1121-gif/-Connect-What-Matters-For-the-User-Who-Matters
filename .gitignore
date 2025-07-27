@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.Python
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Model files and cache
+*.pth
+*.pt
+*.h5
+*.ckpt
+*.onnx
+*.npz
+*.npy
+*.joblib
+*.pkl
+*.log
+.cache/
+*.log
+*.tmp
+*.bak
+
+# HuggingFace cache
+.cache/huggingface/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files (keep challenge1b_output.json for submission)
+# challenge1b_output.json
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp 

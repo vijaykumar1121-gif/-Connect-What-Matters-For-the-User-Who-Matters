@@ -1,0 +1,35 @@
+{
+  "constraints": {
+    "model_size_mb": 592,
+    "size_compliant": true,
+    "cpu_only": true
+  },
+  "benchmarks": [
+    {
+      "test_case": "academic_research",
+      "processing_time_seconds": 12.574384450912476,
+      "memory_usage_mb": 319.2265625,
+      "num_documents": 12,
+      "success": true
+    },
+    {
+      "test_case": "business_analysis",
+      "processing_time_seconds": 12.895695686340332,
+      "memory_usage_mb": -7.4765625,
+      "num_documents": 12,
+      "success": true
+    },
+    {
+      "test_case": "educational_content",
+      "processing_time_seconds": 14.18038010597229,
+      "memory_usage_mb": 8.953125,
+      "num_documents": 12,
+      "success": true
+    }
+  ],
+  "summary": {
+    "total_tests": 3,
+    "successful_tests": 3,
+    "all_constraints_met": true
+  }
+}

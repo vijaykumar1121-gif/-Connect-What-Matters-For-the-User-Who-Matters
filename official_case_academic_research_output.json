@@ -1,0 +1,230 @@
+{
+    "metadata": {
+        "input_documents": [
+            "test_docs\\chemistry_chapter1.pdf",
+            "test_docs\\chemistry_chapter2.pdf",
+            "test_docs\\chemistry_chapter3.pdf",
+            "test_docs\\graph_nn_benchmarks.pdf",
+            "test_docs\\graph_nn_datasets.pdf",
+            "test_docs\\graph_nn_methodology.pdf",
+            "test_docs\\research_paper_sample.pdf",
+            "test_docs\\sample2.pdf",
+            "test_docs\\sample3.pdf",
+            "test_docs\\tech_company_2022.pdf",
+            "test_docs\\tech_company_2023.pdf",
+            "test_docs\\tech_company_2024.pdf"
+        ],
+        "persona": "PhD Researcher in Computational Biology",
+        "job_to_be_done": "Prepare a comprehensive literature review focusing on methodologies, datasets, and performance benchmarks",
+        "processing_timestamp": "2025-07-27 15:51:36 IST"
+    },
+    "extracted_sections": [
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": "1",
+            "section_title": "3. Performance Metrics",
+            "importance_rank": 1,
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.75); Semantic similarity: 0.33; Structural boost applied (x1.57); Persona-specific high-value content found (score: 10.00); Section title matches job keywords (boost: 3.00)",
+            "summary": "We evaluate models using multiple metrics including AUC-ROC, precision-recall curves, and mean\nsquared error. These metrics provide comprehensive assessment of model performance across\ndifferent aspects of drug discovery.",
+            "abstractive_summary": "we evaluate models using multiple metrics including AUC-ROC, precision-recall curves, mean squared error . these metrics provide comprehensive assessment of model performance across different aspects of drug discovery ."
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": "1",
+            "section_title": "4. Performance Benchmarks",
+            "importance_rank": 2,
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.50); Semantic similarity: 0.27; Structural boost applied (x1.57); Persona-specific high-value content found (score: 6.00); Section title matches job keywords (boost: 6.00)",
+            "summary": "Our GNN-based approach achieves state-of-the-art performance on drug-target interaction prediction,\nwith AUC-ROC scores of 0.89 on ChEMBL and 0.91 on BindingDB. We also demonstrate superior\nperformance in molecular property prediction tasks.",
+            "abstractive_summary": "GNN-based approach achieves state-of-the-art performance on drug-target interaction prediction . AUC-ROC scores of 0.89 on ChEMBL and 0.91 on BindingDB ."
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": "1",
+            "section_title": "3. Datasets",
+            "importance_rank": 3,
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.75); Semantic similarity: 0.42; Structural boost applied (x2.36); Persona-specific high-value content found (score: 2.00); Section title matches job keywords (boost: 3.00)",
+            "summary": "We evaluate our methodology on three benchmark datasets: ChEMBL, BindingDB, and PubChem. These datasets contain millions of drug-target interaction pairs with associated experimental data.",
+            "abstractive_summary": "we evaluate our methodology on three benchmark datasets: ChEMBL, BindingDB, and PubChem . these datasets contain millions of drug-target interaction pairs ."
+        },
+        {
+            "document": "test_docs\\graph_nn_datasets.pdf",
+            "page_number": "1",
+            "section_title": "3. Drug-Target Interaction Datasets",
+            "importance_rank": 4,
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.50); Semantic similarity: 0.22; Structural boost applied (x2.36); Section title matches job keywords (boost: 3.00)",
+            "summary": "Our interaction datasets contain experimentally validated drug-target pairs with associated binding\naffinities and inhibition constants. These datasets enable training of models for predicting novel\ndrug-target interactions.",
+            "abstractive_summary": "interaction datasets contain experimentally validated drug-target pairs . these datasets enable training of models for predicting novel drugs-target interactions ."
+        },
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": "1",
+            "section_title": "Abstract",
+            "importance_rank": 5,
+            "explanation": "Matched persona/job keywords (score: 3.00); Matched domain concepts (score: 0.75); Semantic similarity: 0.41; Topic overlap: comprehensive; Structural boost applied (x1.05); Persona-specific high-value content found (score: 4.00)",
+            "summary": "We present a comprehensive benchmarking study comparing various Graph Neural Network\narchitectures for drug discovery tasks. Our evaluation covers multiple datasets and performance\nmetrics to provide insights into the effectiveness of different approaches.",
+            "abstractive_summary": "a comprehensive benchmarking study comparing various Graph Neural Network architectures for drug discovery tasks . our evaluation covers multiple datasets and performance metrics ."
+        }
+    ],
+    "sub_section_analysis": [
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": 1,
+            "refined_text": "We evaluate models using multiple metrics including AUC-ROC, precision-recall curves, and mean",
+            "explanation": "Matched domain concepts (score: 0.50); Persona-specific high-value content found (score: 10.00); Structural boost applied (x0.70); Semantic similarity: 0.38; Job-to-be-done keyword density boost (0.12)",
+            "summary": "We evaluate models using multiple metrics including AUC-ROC, precision-recall curves, and mean",
+            "abstractive_summary": "We evaluate models using multiple metrics including AUC-ROC, precision-recall curves, and mean"
+        },
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": 1,
+            "refined_text": "squared error. These metrics provide comprehensive assessment of model performance across",
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.25); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.47; Job-to-be-done keyword density boost (0.25)",
+            "summary": "squared error. These metrics provide comprehensive assessment of model performance across",
+            "abstractive_summary": "squared error. These metrics provide comprehensive assessment of model performance across"
+        },
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": 1,
+            "refined_text": "different aspects of drug discovery.",
+            "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.09",
+            "summary": "different aspects of drug discovery.",
+            "abstractive_summary": "different aspects of drug discovery."
+        },
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": 1,
+            "refined_text": "architectures for drug discovery tasks. Our evaluation covers multiple datasets and performance",
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.50); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.37; Job-to-be-done keyword density boost (0.38)",
+            "summary": "architectures for drug discovery tasks. Our evaluation covers multiple datasets and performance",
+            "abstractive_summary": "architectures for drug discovery tasks. Our evaluation covers multiple datasets and performance"
+        },
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": 1,
+            "refined_text": "metrics to provide insights into the effectiveness of different approaches.",
+            "explanation": "Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.45",
+            "summary": "metrics to provide insights into the effectiveness of different approaches.",
+            "abstractive_summary": "metrics to provide insights into the effectiveness of different approaches."
+        },
+        {
+            "document": "test_docs\\graph_nn_benchmarks.pdf",
+            "page_number": 1,
+            "refined_text": "We present a comprehensive benchmarking study comparing various Graph Neural Network",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.45; Job-to-be-done keyword density boost (0.25)",
+            "summary": "We present a comprehensive benchmarking study comparing various Graph Neural Network",
+            "abstractive_summary": "We present a comprehensive benchmarking study comparing various Graph Neural Network"
+        },
+        {
+            "document": "test_docs\\graph_nn_datasets.pdf",
+            "page_number": 1,
+            "refined_text": "We present a comprehensive collection of datasets specifically designed for training and evaluating",
+            "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.58; Job-to-be-done keyword density boost (0.50)",
+            "summary": "We present a comprehensive collection of datasets specifically designed for training and evaluating",
+            "abstractive_summary": "We present a comprehensive collection of datasets specifically designed for training and evaluating"
+        },
+        {
+            "document": "test_docs\\graph_nn_datasets.pdf",
+            "page_number": 1,
+            "refined_text": "Graph Neural Networks in drug discovery applications. These datasets cover various aspects of",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.21; Job-to-be-done keyword density boost (0.12)",
+            "summary": "Graph Neural Networks in drug discovery applications. These datasets cover various aspects of",
+            "abstractive_summary": "Graph Neural Networks in drug discovery applications. These datasets cover various aspects of"
+        },
+        {
+            "document": "test_docs\\graph_nn_datasets.pdf",
+            "page_number": 1,
+            "refined_text": "molecular property prediction and drug-target interaction.",
+            "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.10; Job-to-be-done keyword density boost (0.12)",
+            "summary": "molecular property prediction and drug-target interaction.",
+            "abstractive_summary": "molecular property prediction and drug-target interaction."
+        },
+        {
+            "document": "test_docs\\graph_nn_datasets.pdf",
+            "page_number": 1,
+            "refined_text": "affinities and inhibition constants. These datasets enable training of models for predicting novel",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.29; Job-to-be-done keyword density boost (0.25)",
+            "summary": "affinities and inhibition constants. These datasets enable training of models for predicting novel",
+            "abstractive_summary": "affinities and inhibition constants. These datasets enable training of models for predicting novel"
+        },
+        {
+            "document": "test_docs\\graph_nn_datasets.pdf",
+            "page_number": 1,
+            "refined_text": "Our interaction datasets contain experimentally validated drug-target pairs with associated binding",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.20; Job-to-be-done keyword density boost (0.12)",
+            "summary": "Our interaction datasets contain experimentally validated drug-target pairs with associated binding",
+            "abstractive_summary": "Our interaction datasets contain experimentally validated drug-target pairs with associated binding"
+        },
+        {
+            "document": "test_docs\\graph_nn_datasets.pdf",
+            "page_number": 1,
+            "refined_text": "drug-target interactions.",
+            "explanation": "Structural boost applied (x0.70); Semantic similarity: -0.03",
+            "summary": "drug-target interactions.",
+            "abstractive_summary": "drug-target interactions."
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "We evaluate our methodology on three benchmark datasets: ChEMBL, BindingDB, and PubChem.",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.50); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.55; Job-to-be-done keyword density boost (0.38)",
+            "summary": "We evaluate our methodology on three benchmark datasets: ChEMBL, BindingDB, and PubChem.",
+            "abstractive_summary": "We evaluate our methodology on three benchmark datasets: ChEMBL, BindingDB, and PubChem."
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "These datasets contain millions of drug-target interaction pairs with associated experimental data.",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.27; Job-to-be-done keyword density boost (0.12)",
+            "summary": "These datasets contain millions of drug-target interaction pairs with associated experimental data.",
+            "abstractive_summary": "These datasets contain millions of drug-target interaction pairs with associated experimental data."
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "with AUC-ROC scores of 0.89 on ChEMBL and 0.91 on BindingDB. We also demonstrate superior",
+            "explanation": "Persona-specific high-value content found (score: 4.00); Structural boost applied (x0.70); Semantic similarity: 0.25; Job-to-be-done keyword density boost (0.25)",
+            "summary": "with AUC-ROC scores of 0.89 on ChEMBL and 0.91 on BindingDB. We also demonstrate superior",
+            "abstractive_summary": "with AUC-ROC scores of 0.89 on ChEMBL and 0.91 on BindingDB. We also demonstrate superior"
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "Our GNN-based approach achieves state-of-the-art performance on drug-target interaction prediction,",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.30; Job-to-be-done keyword density boost (0.25)",
+            "summary": "Our GNN-based approach achieves state-of-the-art performance on drug-target interaction prediction,",
+            "abstractive_summary": "Our GNN-based approach achieves state-of-the-art performance on drug-target interaction prediction,"
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "performance in molecular property prediction tasks.",
+            "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.32; Job-to-be-done keyword density boost (0.12)",
+            "summary": "performance in molecular property prediction tasks.",
+            "abstractive_summary": "performance in molecular property prediction tasks."
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "discovery applications. We introduce a comprehensive framework that leverages molecular graph",
+            "explanation": "Matched persona/job keywords (score: 1.00); Structural boost applied (x0.70); Semantic similarity: 0.18; Job-to-be-done keyword density boost (0.25)",
+            "summary": "discovery applications. We introduce a comprehensive framework that leverages molecular graph",
+            "abstractive_summary": "discovery applications. We introduce a comprehensive framework that leverages molecular graph"
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "This paper presents a novel methodology for applying Graph Neural Networks (GNNs) to drug",
+            "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.20; Job-to-be-done keyword density boost (0.12)",
+            "summary": "This paper presents a novel methodology for applying Graph Neural Networks (GNNs) to drug",
+            "abstractive_summary": "This paper presents a novel methodology for applying Graph Neural Networks (GNNs) to drug"
+        },
+        {
+            "document": "test_docs\\graph_nn_methodology.pdf",
+            "page_number": 1,
+            "refined_text": "representations to predict drug-target interactions and molecular properties.",
+            "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.11; Job-to-be-done keyword density boost (0.12)",
+            "summary": "representations to predict drug-target interactions and molecular properties.",
+            "abstractive_summary": "representations to predict drug-target interactions and molecular properties."
+        }
+    ]
+}
