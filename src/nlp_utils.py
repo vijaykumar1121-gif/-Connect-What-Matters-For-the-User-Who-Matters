@@ -39,17 +39,33 @@ def extract_entities(text: str, entity_types: list = None) -> list:
         return [ent.text for ent in doc.ents]
 def extract_topics(texts: list, num_topics: int = 3, num_words: int = 5):
     try:
+        # Filter out empty or very short texts
+        valid_texts = [text for text in texts if len(text.strip()) > 10]
+        if len(valid_texts) < 2:
+            all_text = ' '.join(texts)
+            keywords = extract_keywords(all_text, num_words * num_topics)
+            return [(i, ' + '.join(keywords[i*num_words:(i+1)*num_words])) 
+                    for i in range(num_topics)]
+        
         vectorizer = TfidfVectorizer(
-            max_features=1000,
+            max_features=500,
             stop_words='english',
             ngram_range=(1, 2),
-            min_df=2
+            min_df=1,
+            max_df=0.95
         )
-        tfidf_matrix = vectorizer.fit_transform(texts)
+        tfidf_matrix = vectorizer.fit_transform(valid_texts)
+        
+        if tfidf_matrix.shape[1] < num_topics:
+            all_text = ' '.join(texts)
+            keywords = extract_keywords(all_text, num_words * num_topics)
+            return [(i, ' + '.join(keywords[i*num_words:(i+1)*num_words])) 
+                    for i in range(num_topics)]
+        
         lda = LatentDirichletAllocation(
-            n_components=num_topics,
+            n_components=min(num_topics, tfidf_matrix.shape[1]),
             random_state=42,
-            max_iter=10
+            max_iter=5
         )
         lda.fit(tfidf_matrix)
         feature_names = vectorizer.get_feature_names_out()
@@ -60,7 +76,6 @@ def extract_topics(texts: list, num_topics: int = 3, num_words: int = 5):
             topics.append((topic_idx, ' + '.join(top_words)))
         return topics
     except Exception as e:
-        print(f"Topic modeling failed: {e}")
         all_text = ' '.join(texts)
         keywords = extract_keywords(all_text, num_words * num_topics)
         return [(i, ' + '.join(keywords[i*num_words:(i+1)*num_words])) 

@@ -57,6 +57,7 @@ class OutputFormatter:
                 "page_number": f"{section_data['page_range'][0]}-{section_data['page_range'][1]}" if section_data['page_range'][0] != section_data['page_range'][1] else str(section_data['page_range'][0]),
                 "section_title": section_data["section_title"],
                 "importance_rank": i + 1,
+                "importance_score": section_data.get("importance_score", 0.0),
                 "explanation": section_data.get("explanation", ""),
                 "summary": summary,
                 "abstractive_summary": abs_summary
@@ -86,6 +87,7 @@ class OutputFormatter:
                     "document": ss_data["document"],
                     "page_number": ss_data["page_number"],
                     "refined_text": refined_text,
+                    "importance_score": ss_data.get("importance_score", 0.0),
                     "explanation": ss_data.get("explanation", ""),
                     "summary": refined_text,
                     "abstractive_summary": abs_summary

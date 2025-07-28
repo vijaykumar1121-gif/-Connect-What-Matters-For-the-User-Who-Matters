@@ -7,22 +7,22 @@
   "benchmarks": [
     {
       "test_case": "academic_research",
-      "processing_time_seconds": 12.574384450912476,
-      "memory_usage_mb": 319.2265625,
+      "processing_time_seconds": 13.325364112854004,
+      "memory_usage_mb": 319.19140625,
       "num_documents": 12,
       "success": true
     },
     {
       "test_case": "business_analysis",
-      "processing_time_seconds": 12.895695686340332,
-      "memory_usage_mb": -7.4765625,
+      "processing_time_seconds": 11.78018569946289,
+      "memory_usage_mb": -4.984375,
       "num_documents": 12,
       "success": true
     },
     {
       "test_case": "educational_content",
-      "processing_time_seconds": 14.18038010597229,
-      "memory_usage_mb": 8.953125,
+      "processing_time_seconds": 13.592332363128662,
+      "memory_usage_mb": 6.546875,
       "num_documents": 12,
       "success": true
     }

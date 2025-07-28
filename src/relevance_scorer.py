@@ -122,9 +122,14 @@ class RelevanceScorer:
                 section_score += concept_score
 
                 # Semantic similarity
-                sem_score = semantic_similarity(persona_job_text, section.text_content)
-                section_score += sem_score * 2.0  # Weight can be tuned
-                explanation_parts.append(f"Semantic similarity: {sem_score:.2f}")
+                try:
+                    sem_score = semantic_similarity(persona_job_text, section.text_content)
+                    section_score += sem_score * 2.0  # Weight can be tuned
+                    explanation_parts.append(f"Semantic similarity: {sem_score:.2f}")
+                except Exception as e:
+                    # Fallback to simple keyword matching if semantic similarity fails
+                    sem_score = 0.0
+                    explanation_parts.append("Semantic similarity calculation failed, using keyword matching")
 
                 # NER entity overlap
                 section_entities = set(extract_entities(section.text_content))

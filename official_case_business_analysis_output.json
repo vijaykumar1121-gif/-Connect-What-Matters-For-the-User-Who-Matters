@@ -16,7 +16,7 @@
         ],
         "persona": "Investment Analyst",
         "job_to_be_done": "Analyze revenue trends, R&D investments, and market positioning strategies",
-        "processing_timestamp": "2025-07-27 15:52:39 IST"
+        "processing_timestamp": "2025-07-28 12:10:24 IST"
     },
     "extracted_sections": [
         {
@@ -24,6 +24,7 @@
             "page_number": "1",
             "section_title": "Market Positioning",
             "importance_rank": 1,
+            "importance_score": 12.893266952037811,
             "explanation": "Matched persona/job keywords (score: 4.00); Semantic similarity: 0.41; Topic overlap: market; Structural boost applied (x0.84); Persona-specific high-value content found (score: 2.00); Section title matches job keywords (boost: 6.00)",
             "summary": "TechCorp maintains strong market positions in cloud infrastructure (35% market share), AI platforms\n(28% market share), and enterprise software (22% market share). We continue to expand into\nemerging markets and new technology sectors.",
             "abstractive_summary": "TechCorp maintains strong market positions in cloud infrastructure (35% market share), AI platforms (28% market share) and enterprise software (22% market share ."
@@ -33,6 +34,7 @@
             "page_number": "1",
             "section_title": "R&D; Investments",
             "importance_rank": 2,
+            "importance_score": 11.82415479183197,
             "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.50); Semantic similarity: 0.43; Structural boost applied (x0.84); Section title matches job keywords (boost: 9.00)",
             "summary": "We invested $2.3 billion in research and development in 2022, representing 15% of total revenue. Key\nfocus areas include artificial intelligence, quantum computing, and cybersecurity. Our R&D; team grew\nto 5,000 engineers and scientists.",
             "abstractive_summary": "we invested $2.3 billion in research and development in 2022, representing 15% of total revenue . key focus areas include artificial intelligence, quantum computing, and cybersecurity ."
@@ -42,6 +44,7 @@
             "page_number": "1",
             "section_title": "R&D; Strategy",
             "importance_rank": 3,
+            "importance_score": 11.566500500440597,
             "explanation": "Matched persona/job keywords (score: 3.00); Matched domain concepts (score: 0.50); Semantic similarity: 0.36; Topic overlap: revenue; Structural boost applied (x1.26); Persona-specific high-value content found (score: 2.00); Section title matches job keywords (boost: 3.00)",
             "summary": "R&D; investment increased to $3.1 billion (16% of revenue). We established new research centers in\nAsia and Europe. Key breakthroughs in quantum computing and generative AI were achieved.",
             "abstractive_summary": "investment increased to $3.1 billion (16% of revenue) we established new research centers in Asia and Europe ."
@@ -51,6 +54,7 @@
             "page_number": "1",
             "section_title": "Revenue Growth",
             "importance_rank": 4,
+            "importance_score": 9.900690751075743,
             "explanation": "Matched persona/job keywords (score: 3.00); Matched domain concepts (score: 0.75); Semantic similarity: 0.36; Topic overlap: revenue; Structural boost applied (x1.26); Section title matches job keywords (boost: 3.00)",
             "summary": "Total revenue reached $25.7 billion, up 30% from 2023. AI solutions revenue grew 80% to $5.8 billion. Cloud services revenue increased 50% to $12.7 billion.",
             "abstractive_summary": "total revenue reached $25.7 billion, up 30% from 2023 . cloud services revenue increased 50% to $12.7 billion . operating margin reached 35% ."
@@ -60,6 +64,7 @@
             "page_number": "1",
             "section_title": "Market Leadership",
             "importance_rank": 5,
+            "importance_score": 8.949502527713776,
             "explanation": "Matched persona/job keywords (score: 3.00); Semantic similarity: 0.35; Topic overlap: market; Structural boost applied (x0.84); Persona-specific high-value content found (score: 2.00); Section title matches job keywords (boost: 3.00)",
             "summary": "TechCorp achieved market leadership in AI platforms with 35% market share. Cloud infrastructure\nmarket share grew to 38%. We are the preferred partner for enterprise digital transformation initiatives.",
             "abstractive_summary": "TechCorp achieved market leadership in AI platforms with 35% market share . cloud infrastructure market share rose to 38% ."
@@ -70,6 +75,7 @@
             "document": "test_docs\\tech_company_2022.pdf",
             "page_number": 1,
             "refined_text": "(28% market share), and enterprise software (22% market share). We continue to expand into",
+            "importance_score": 4.059571452935536,
             "explanation": "Matched persona/job keywords (score: 2.00); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.46; Job-to-be-done keyword density boost (0.33)",
             "summary": "(28% market share), and enterprise software (22% market share). We continue to expand into",
             "abstractive_summary": "(28% market share), and enterprise software (22% market share). We continue to expand into"
@@ -78,6 +84,7 @@
             "document": "test_docs\\tech_company_2022.pdf",
             "page_number": 1,
             "refined_text": "TechCorp maintains strong market positions in cloud infrastructure (35% market share), AI platforms",
+            "importance_score": 3.7655101696650184,
             "explanation": "Matched persona/job keywords (score: 2.00); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.40; Job-to-be-done keyword density boost (0.17)",
             "summary": "TechCorp maintains strong market positions in cloud infrastructure (35% market share), AI platforms",
             "abstractive_summary": "TechCorp maintains strong market positions in cloud infrastructure (35% market share), AI platforms"
@@ -86,6 +93,7 @@
             "document": "test_docs\\tech_company_2022.pdf",
             "page_number": 1,
             "refined_text": "emerging markets and new technology sectors.",
+            "importance_score": 1.081226686636607,
             "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.46; Job-to-be-done keyword density boost (0.17)",
             "summary": "emerging markets and new technology sectors.",
             "abstractive_summary": "emerging markets and new technology sectors."
@@ -94,6 +102,7 @@
             "document": "test_docs\\tech_company_2022.pdf",
             "page_number": 1,
             "refined_text": "We invested $2.3 billion in research and development in 2022, representing 15% of total revenue. Key",
+            "importance_score": 1.9723374446233113,
             "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.38; Job-to-be-done keyword density boost (0.33)",
             "summary": "We invested $2.3 billion in research and development in 2022, representing 15% of total revenue. Key",
             "abstractive_summary": "We invested $2.3 billion in research and development in 2022, representing 15% of total revenue. Key"
@@ -102,6 +111,7 @@
             "document": "test_docs\\tech_company_2022.pdf",
             "page_number": 1,
             "refined_text": "focus areas include artificial intelligence, quantum computing, and cybersecurity. Our R&D; team grew",
+            "importance_score": 1.9414694507916768,
             "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.37; Job-to-be-done keyword density boost (0.33)",
             "summary": "focus areas include artificial intelligence, quantum computing, and cybersecurity. Our R&D; team grew",
             "abstractive_summary": "focus areas include artificial intelligence, quantum computing, and cybersecurity. Our R&D; team grew"
@@ -110,6 +120,7 @@
             "document": "test_docs\\tech_company_2022.pdf",
             "page_number": 1,
             "refined_text": "to 5,000 engineers and scientists.",
+            "importance_score": 0.25883334378401435,
             "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.05; Job-to-be-done keyword density boost (0.17)",
             "summary": "to 5,000 engineers and scientists.",
             "abstractive_summary": "to 5,000 engineers and scientists."
@@ -118,6 +129,7 @@
             "document": "test_docs\\tech_company_2023.pdf",
             "page_number": 1,
             "refined_text": "R&D; investment increased to $3.1 billion (16% of revenue). We established new research centers in",
+            "importance_score": 5.255102451642354,
             "explanation": "Matched persona/job keywords (score: 3.00); Matched domain concepts (score: 0.50); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.54; Job-to-be-done keyword density boost (0.33)",
             "summary": "R&D; investment increased to $3.1 billion (16% of revenue). We established new research centers in",
             "abstractive_summary": "R&D; investment increased to $3.1 billion (16% of revenue). We established new research centers in"
@@ -126,6 +138,7 @@
             "document": "test_docs\\tech_company_2023.pdf",
             "page_number": 1,
             "refined_text": "Asia and Europe. Key breakthroughs in quantum computing and generative AI were achieved.",
+            "importance_score": 0.26960648099581397,
             "explanation": "Structural boost applied (x0.70); Semantic similarity: 0.05; Job-to-be-done keyword density boost (0.17)",
             "summary": "Asia and Europe. Key breakthroughs in quantum computing and generative AI were achieved.",
             "abstractive_summary": "Asia and Europe. Key breakthroughs in quantum computing and generative AI were achieved."
@@ -134,6 +147,7 @@
             "document": "test_docs\\tech_company_2024.pdf",
             "page_number": 1,
             "refined_text": "TechCorp achieved market leadership in AI platforms with 35% market share. Cloud infrastructure",
+            "importance_score": 3.6525462547938026,
             "explanation": "Matched persona/job keywords (score: 2.00); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.34; Job-to-be-done keyword density boost (0.17)",
             "summary": "TechCorp achieved market leadership in AI platforms with 35% market share. Cloud infrastructure",
             "abstractive_summary": "TechCorp achieved market leadership in AI platforms with 35% market share. Cloud infrastructure"
@@ -142,6 +156,7 @@
             "document": "test_docs\\tech_company_2024.pdf",
             "page_number": 1,
             "refined_text": "market share grew to 38%. We are the preferred partner for enterprise digital transformation initiatives.",
+            "importance_score": 3.040849582354227,
             "explanation": "Matched persona/job keywords (score: 1.00); Persona-specific high-value content found (score: 2.00); Structural boost applied (x0.70); Semantic similarity: 0.39; Job-to-be-done keyword density boost (0.17)",
             "summary": "market share grew to 38%. We are the preferred partner for enterprise digital transformation initiatives.",
             "abstractive_summary": "market share grew to 38%. We are the preferred partner for enterprise digital transformation initiatives."
@@ -150,6 +165,7 @@
             "document": "test_docs\\tech_company_2024.pdf",
             "page_number": 1,
             "refined_text": "Total revenue reached $25.7 billion, up 30% from 2023. AI solutions revenue grew 80% to $5.8 billion.",
+            "importance_score": 2.6540081898371377,
             "explanation": "Matched persona/job keywords (score: 2.00); Matched domain concepts (score: 0.50); Structural boost applied (x0.70); Semantic similarity: 0.37; Job-to-be-done keyword density boost (0.17)",
             "summary": "Total revenue reached $25.7 billion, up 30% from 2023. AI solutions revenue grew 80% to $5.8 billion.",
             "abstractive_summary": "Total revenue reached $25.7 billion, up 30% from 2023. AI solutions revenue grew 80% to $5.8 billion."
@@ -158,6 +174,7 @@
             "document": "test_docs\\tech_company_2024.pdf",
             "page_number": 1,
             "refined_text": "Cloud services revenue increased 50% to $12.7 billion. Operating margin reached 35%.",
+            "importance_score": 1.6327903072039287,
             "explanation": "Matched persona/job keywords (score: 1.00); Matched domain concepts (score: 0.25); Structural boost applied (x0.70); Semantic similarity: 0.30; Job-to-be-done keyword density boost (0.17)",
             "summary": "Cloud services revenue increased 50% to $12.7 billion. Operating margin reached 35%.",
             "abstractive_summary": "Cloud services revenue increased 50% to $12.7 billion. Operating margin reached 35%."
