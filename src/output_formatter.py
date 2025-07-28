@@ -1,59 +1,33 @@
-# src/output_formatter.py
-
 import re
 from typing import List, Dict, Any, Tuple
 from datetime import datetime
 from src.nlp_utils import abstractive_summary
-
 class OutputFormatter:
     def __init__(self):
-        self.max_sections_to_output = 5      # Top N sections to include in final output
-        self.max_subsections_per_section = 3 # Top M subsections from each relevant section
-        self.max_refined_text_sentences = 3  # Max sentences for refined text
-
+        self.max_sections_to_output = 5
+        self.max_subsections_per_section = 3
+        self.max_refined_text_sentences = 3
     def _get_sentences(self, text: str) -> List[str]:
-        """Simple sentence tokenizer."""
-        # Split by common sentence terminators, keeping the terminator
         sentences = re.split(r'(?<=[.!?])\s+', text)
         return [s.strip() for s in sentences if s.strip()]
-
     def _select_relevant_sentences(self, text: str, keywords: List[str], max_sentences: int) -> str:
-        """
-        Selects sentences most relevant to keywords using a simple scoring.
-        Prioritizes sentences with more keywords, and first/last sentences.
-        """
         sentences = self._get_sentences(text)
         if not sentences:
             return ""
-
-        # Normalize keywords for matching
         normalized_keywords = [re.sub(r'[^a-z0-9\s]', '', k.lower()) for k in keywords]
-
         scored_sentences = []
         for i, sentence in enumerate(sentences):
             normalized_sentence = re.sub(r'[^a-z0-9\s]', '', sentence.lower())
-            
             score = 0
-            # Keyword presence count
             for keyword in normalized_keywords:
                 if keyword in normalized_sentence:
                     score += normalized_sentence.count(keyword)
-            
-            # Boost for first/last sentences (often summary or concluding thoughts)
             if i == 0 or i == len(sentences) - 1:
-                score += 0.5 # Small boost
-
-            scored_sentences.append((score, i, sentence)) # Store score, original index, and sentence
-
-        # Sort by score (descending), then by original index (ascending for order)
-        scored_sentences.sort(key=lambda x: (x[0], -x[1]), reverse=True) # Sort by score, then reverse index to keep original order if scores are same
-        
-        # Select top N sentences, maintaining original order
+                score += 0.5
+            scored_sentences.append((score, i, sentence))
+        scored_sentences.sort(key=lambda x: (x[0], -x[1]), reverse=True)
         selected_sentences_with_indices = sorted(scored_sentences[:max_sentences], key=lambda x: x[1])
-        
         return " ".join([s[2] for s in selected_sentences_with_indices])
-
-
     def format_output(
         self,
         document_paths: List[str],
@@ -62,21 +36,14 @@ class OutputFormatter:
         ranked_sections: List[Dict],
         ranked_subsections: List[Dict],
         processing_start_time: float,
-        persona_features: Dict[str, Any] # Need persona features for keywords
+        persona_features: Dict[str, Any]
     ) -> Dict[str, Any]:
-        """
-        Formats the processed data into the specified challenge1b_output.json structure.
-        """
-        # --- Metadata ---
         output_metadata = {
             "input_documents": [doc_path.split('/')[-1] for doc_path in document_paths],
             "persona": persona_description,
             "job_to_be_done": job_to_be_done,
             "processing_timestamp": datetime.fromtimestamp(processing_start_time).strftime("%Y-%m-%d %H:%M:%S IST")
         }
-
-        # --- Extracted Sections ---
-        # Select top N relevant sections
         final_extracted_sections = []
         for i, section_data in enumerate(ranked_sections[:self.max_sections_to_output]):
             summary = self._select_relevant_sentences(
@@ -89,13 +56,11 @@ class OutputFormatter:
                 "document": section_data["document"],
                 "page_number": f"{section_data['page_range'][0]}-{section_data['page_range'][1]}" if section_data['page_range'][0] != section_data['page_range'][1] else str(section_data['page_range'][0]),
                 "section_title": section_data["section_title"],
-                "importance_rank": i + 1, # Re-rank based on final selection
+                "importance_rank": i + 1,
                 "explanation": section_data.get("explanation", ""),
                 "summary": summary,
                 "abstractive_summary": abs_summary
             })
-
-        # --- Sub-section Analysis ---
         final_subsection_analysis = []
         relevant_section_titles = {s['section_title'] for s in final_extracted_sections}
         filtered_subsections = [

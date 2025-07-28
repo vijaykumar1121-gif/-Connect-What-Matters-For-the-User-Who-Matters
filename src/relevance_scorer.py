@@ -52,17 +52,16 @@ class RelevanceScorer:
 
         if isinstance(section_or_subsection, Section):
             level_key = f"H{section_or_subsection.level}"
-            boost *= structural_boosts.get(level_key, 1.0)
-            # Check for high-value sections (e.g., Abstract, Conclusion often have high inherent importance)
+            boost *= structural_boosts.get(level_key, 1.0)    
             normalized_title = self._normalize_text(section_or_subsection.title)
             for title_keyword in heuristics.get("priority_section_titles", []):
                 if self._normalize_text(title_keyword) in normalized_title:
-                    boost *= 1.5 # Extra boost for explicitly important section titles
+                    boost *= 1.5 
         
         elif isinstance(section_or_subsection, Subsection):
             if section_or_subsection.is_list_item:
                 boost *= structural_boosts.get("lists", 1.0)
-            if section_or_subsection.is_table_candidate: # Assuming this flag is set during parsing
+            if section_or_subsection.is_table_candidate: 
                 boost *= structural_boosts.get("tables", 1.0)
         
         return boost
@@ -74,7 +73,7 @@ class RelevanceScorer:
 
         for keyword in heuristics.get("high_value_content_keywords", []):
             if self._normalize_text(keyword) in normalized_text:
-                score_modifier += 1.0 # Add to score for high-value terms
+                score_modifier += 1.0 
 
         for keyword in heuristics.get("de_emphasize_content_keywords", []):
             if self._normalize_text(keyword) in normalized_text:
@@ -134,7 +133,7 @@ class RelevanceScorer:
                     section_score += len(common_entities) * 1.5  # Boost per entity
                     explanation_parts.append(f"Entity overlap: {', '.join(common_entities)}")
 
-                # Topic modeling
+                
                 section_topics = set()
                 try:
                     section_topics = set([w for t in extract_topics([section.text_content], num_topics=1, num_words=5) for w in t[1].split(' + ')])
@@ -151,15 +150,13 @@ class RelevanceScorer:
                     explanation_parts.append(f"Structural boost applied (x{struct_boost:.2f})")
                 section_score *= struct_boost
 
-                # 3. Persona Heuristics Content Modifier
+                
                 heur_score = self._apply_persona_heuristics(section.text_content, heuristics) * self.default_weights["persona_heuristic_boost"]
                 if heur_score > 0:
                     explanation_parts.append(f"Persona-specific high-value content found (score: {heur_score:.2f})")
                 elif heur_score < 0:
                     explanation_parts.append(f"De-emphasized content found (score: {heur_score:.2f})")
                 section_score += heur_score
-
-                # 4. Proximity to JTD/Persona Keywords (especially for initial content or titles)
                 normalized_title = self._normalize_text(section.title)
                 jtd_keywords_in_title = sum(1 for kw in keywords if kw in normalized_title)
                 if jtd_keywords_in_title > 0:
@@ -179,8 +176,6 @@ class RelevanceScorer:
                     "raw_text_content": section.text_content, # For summarization
                     "explanation": "; ".join(explanation_parts) if explanation_parts else "General relevance to persona/job."
                 })
-
-                # --- Granular Sub-Section Scoring ---
                 for subsection in section.subsections:
                     subsection_score = 0.0
                     ss_explanation_parts = []
@@ -206,8 +201,6 @@ class RelevanceScorer:
                     if struct_boost != 1.0:
                         ss_explanation_parts.append(f"Structural boost applied (x{struct_boost:.2f})")
                     subsection_score *= struct_boost
-
-                    # Semantic similarity for subsections
                     sem_score_ss = semantic_similarity(persona_job_text, subsection.text_content)
                     subsection_score += sem_score_ss * 2.0
                     ss_explanation_parts.append(f"Semantic similarity: {sem_score_ss:.2f}")
